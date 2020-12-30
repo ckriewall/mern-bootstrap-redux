@@ -16,6 +16,9 @@ const Students = () => {
 
   return (
     <div>
+      <h2>Students From MongoDB</h2>
+      <p>The list below is pulled from MongoDB via Redux State.</p>
+
       {loading ? (
         <Loader />
       ) : error ? (
