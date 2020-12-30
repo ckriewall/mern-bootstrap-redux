@@ -23,7 +23,7 @@ const Students = () => {
       ) : (
         <ul>
           {students.map((stu) => (
-            <li>
+            <li key={stu._id}>
               {stu.name.last}, {stu.name.first}
             </li>
           ))}
