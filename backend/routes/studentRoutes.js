@@ -6,7 +6,10 @@ const router = express.Router()
 // @desc    Get Students
 // @route   GET /api/students
 router.get('/', async (req, res) => {
-  const students = await Student.find()
+  const students = await Student.find().sort({
+    'name.last': 1,
+    'name.first': 1,
+  })
   res.json(students)
 })
 
